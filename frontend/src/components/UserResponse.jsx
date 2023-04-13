@@ -1,11 +1,16 @@
 function UserResponse() {
   return (
-    <input
-      type="text"
-      id="response"
-      name="response"
-      className="inputResponse"
-    />
+    <div className="inputButton">
+      <input
+        type="text"
+        id="response"
+        name="response"
+        className="inputResponse"
+      />
+      <button type="button" className="okButton">
+        Ok
+      </button>
+    </div>
   );
 }
 
