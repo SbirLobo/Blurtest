@@ -1,9 +1,10 @@
 import "./App.css";
+import UserResponse from "./components/UserResponse";
 
 function App() {
   return (
     <div>
-      <p className="bg-primary text-secondary">coucou</p>
+      <UserResponse />
     </div>
   );
 }
