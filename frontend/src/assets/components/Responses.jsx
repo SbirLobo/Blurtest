@@ -1,11 +1,21 @@
 function Responses() {
   return (
-    <div className="m-5 flex flex-col bg-secondary">
-      <p className="neumorphResponse">Titre : </p>
-      <p className="neumorphResponse">Année : </p>
-      <p className="neumorphResponse">Réalisateur : </p>
-      <p className="neumorphResponse">Acteur principal : </p>
-    </div>
+    <section className="m-5 flex flex-col bg-secondary rounded-sm">
+      <div className="neumorphResponse">
+        <p className="md:text-xl">Titre :</p>
+      </div>
+      <div className="neumorphResponse">
+        <p className="md:text-xl">Année :</p>
+      </div>
+      <div className="neumorphResponse">
+        <p className="md:text-xl">Réalisateur :</p>
+      </div>
+      <div className="neumorphResponse">
+        <p className="md:text-xl">Acteurs Principaux :</p>
+        <p className="md:text-xl">-</p>
+        <p className="md:text-xl">-</p>
+      </div>
+    </section>
   );
 }
 export default Responses;
