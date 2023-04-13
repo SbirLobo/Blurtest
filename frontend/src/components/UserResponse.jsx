@@ -14,7 +14,7 @@ function UserResponse() {
         <button type="button" className="okButton hover:okButtonHover">
           Ok
         </button>
-        <a href="#" className="buttonArrow">
+        <a href="www.google.fr" className="buttonArrow">
           <img className="arrowNext" src={arrow} alt="Flèche suivante" />
         </a>
       </div>
