@@ -1,3 +1,5 @@
+import arrow from "../assets/chevron-forward-outline.svg";
+
 function UserResponse() {
   return (
     <div className="inputButton">
@@ -7,9 +9,12 @@ function UserResponse() {
         name="response"
         className="inputResponse"
       />
-      <button type="button" className="okButton">
-        Ok
-      </button>
+      <div className="buttonArrow">
+        <button type="button" className="okButton">
+          Ok
+        </button>
+        <img src={arrow} alt="Flèche suivante" className="arrowNext" />
+      </div>
     </div>
   );
 }
