@@ -16,12 +16,25 @@
         background-color: #FAF9F0;
     }
 
+    .buttonArrow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1.4rem;
+    }
+
     .okButton {
         width: 5.4rem;
         height: 1.7rem;
         background-color: #FAF9F0;
         box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
         border-radius: 0.5rem;
-        margin-top: 1.4rem;
+        grid-column: 2;
+        align-self: center;
+    }
+
+    .arrowNext {
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-self: end;
     }
 }
