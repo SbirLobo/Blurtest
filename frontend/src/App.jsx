@@ -3,7 +3,7 @@ import UserResponse from "./components/UserResponse";
 
 function App() {
   return (
-    <div>
+    <div className="bg-primary h-screen">
       <UserResponse />
     </div>
   );

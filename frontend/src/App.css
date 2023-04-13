@@ -12,11 +12,12 @@
     .inputResponse {
         width: 16rem;
         height: 2.7rem;
+        padding-left: 0.5rem;
         border-radius: 8px;
         background-color: #FAF9F0;
     }
 
-    .buttonArrow {
+    .okArrow {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-top: 1.4rem;
@@ -32,9 +33,17 @@
         align-self: center;
     }
 
+    .okButtonHover {
+        background-color: #E9C46A;
+        color: #264653
+    }
+
+    .buttonArrow {
+        justify-self: end;
+    }
+
     .arrowNext {
         width: 2.5rem;
         height: 2.5rem;
-        justify-self: end;
     }
 }

@@ -7,13 +7,16 @@ function UserResponse() {
         type="text"
         id="response"
         name="response"
+        placeholder="Une idée ?"
         className="inputResponse"
       />
-      <div className="buttonArrow">
-        <button type="button" className="okButton">
+      <div className="okArrow">
+        <button type="button" className="okButton hover:okButtonHover">
           Ok
         </button>
-        <img src={arrow} alt="Flèche suivante" className="arrowNext" />
+        <a href="#" className="buttonArrow">
+          <img className="arrowNext" src={arrow} alt="Flèche suivante" />
+        </a>
       </div>
     </div>
   );
