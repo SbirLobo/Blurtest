@@ -1,0 +1,67 @@
+{
+  "Science-Fiction": {
+    "imageUrl": "https://i.imgur.com/qFY8RZj.jpg",
+    "films": [
+      {
+        "titre": "Inception",
+        "url": "https://www.themoviedb.org/t/p/original/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg"
+      },
+      {
+        "titre": "Interstellar",
+        "url": "https://www.themoviedb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+      },
+      {
+        "titre": "The Matrix",
+        "url": "https://www.themoviedb.org/t/p/original/hEpWvX6Bp79eLxY1kX5ZZJcme5U.jpg"
+      }
+    ]
+  },
+  "Drame": {
+    "imageUrl": "https://i.imgur.com/5jKpI8M.jpg",
+    "films": [
+      {
+        "titre": "The Shawshank Redemption",
+        "url": "https://www.themoviedb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+      },
+      {
+        "titre": "The Godfather",
+        "url": "https://www.themoviedb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+      },
+      {
+        "titre": "Forrest Gump",
+        "url": "https://www.themoviedb.org/t/p/original/clolk7rB5lAjs41SD0Vt6IXYLMm.jpg"
+      }
+    ]
+  },
+  "Action-Crime": {
+    "imageUrl": "https://i.imgur.com/c8JnR4S.jpg",
+    "films": [
+      {
+        "titre": "Pulp Fiction",
+        "url": "https://www.themoviedb.org/t/p/original/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+      },
+      {
+        "titre": "The Dark Knight",
+        "url": "https://www.themoviedb.org/t/p/original/1P3ZyEq02wcTMd3iE4ebtLvncvH.jpg"
+      }
+    ]
+  },
+  "Thriller": {
+    "imageUrl": "https://i.imgur.com/lFp6Wm8.jpg",
+    "films": [
+      {
+        "titre": "Fight Club",
+        "url": "https://www.themoviedb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg"
+      }
+    ]
+  },
+  "Fantasy-Aventure": {
+    "imageUrl": "https://i.imgur.com/WvjIy1Y.jpg",
+    "films": [
+      {
+        "titre": "The Lord of the Rings: The Fellowship of the Ring",
+        "url": "https://www.themoviedb.org/t/p/original/56zTpe2xvaA4alU51sRWPoKPYZy.jpg"
+      }
+    ]
+  }
+}
