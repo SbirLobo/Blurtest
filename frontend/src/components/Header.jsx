@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="w-full h-16 bg-secondary p-2 flex items-center absolute top-0">
+    <header className="w-full h-16 bg-secondary p-2 flex items-center absolute top-0 z-10">
       <a href=".">
         <img
           src="./src/assets/Blogo.png"
@@ -13,12 +13,6 @@ function Header() {
           <span className="blur-xs">Blur</span>test
         </h1>
       </a>
-      <label className="absolute right-5">
-        <input type="checkbox" />
-        <span>{}</span>
-        <span>{}</span>
-        <span>{}</span>
-      </label>
     </header>
   );
 }
