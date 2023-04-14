@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
       <Header />
-      <div className="w-full md:flex md:flex-row md:justify-center">
+      <div className="w-full md:flex md:flex-row md:justify-center gap-10">
         <CardFilm />
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-end items-center">
           <UserResponse />
           <Responses />
           <Score />

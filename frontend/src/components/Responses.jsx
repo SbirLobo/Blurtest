@@ -15,7 +15,9 @@ function Responses() {
         <p className="md:text-xl">
           <br />
         </p>
-        <p className="md:text-xl">efefefef</p>
+        <p className="md:text-xl">
+          <br />
+        </p>
       </div>
     </section>
   );

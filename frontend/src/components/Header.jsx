@@ -8,9 +8,11 @@ function Header() {
           className="h-16 mr-2 p-1"
         />
       </a>
-      <h1 className="text-5xl font-playfair">
-        <span className="blur-xs">Blur</span>test
-      </h1>
+      <a href=".">
+        <h1 className="text-5xl font-playfair">
+          <span className="blur-xs">Blur</span>test
+        </h1>
+      </a>
       <label className="absolute right-5">
         <input type="checkbox" />
         <span>{}</span>
