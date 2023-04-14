@@ -2,7 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "playfair";
+  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* BugerMenu */
+label {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+label span {
+  background: black;
+  border-radius: 10px;
+  height: 7px;
+  margin: 4px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 50%;
+}
+
+span:nth-of-type(2) {
+  width: 100%;
+}
+
+span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(6px, 0px);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(18px, -9px) rotatez(45deg);
+}
+
+/* Tailwind */
 @layer utilities {
+    .neumorphResponse {
+      font-size: 11px;
+      padding-left: 5px;
+      border-radius: 2px;
+      background: #faf9f0;
+      box-shadow: -5px 5px 6px #a09f9a, 5px -5px 6px #ffffff;
+      margin: 8px;
+    }
+  
+    .inputButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputButtonDesktop {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .inputResponse {
+        width: 16rem;
+        height: 2.7rem;
+        padding-left: 0.5rem;
+        border-radius: 8px;
+        background-color: #FAF9F0;
+    }
+
+    .okArrow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1.4rem;
+    }
+
+    .okArrowDesktop {
+        margin-top: 0;
+        display: flex;
+    }
+
+    .okButton {
+        width: 5.4rem;
+        height: 1.7rem;
+        background-color: #FAF9F0;
+        box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.5rem;
+        grid-column: 2;
+        align-self: center;
+    }
+
+    .okButtonDesktop {
+        width: 3.875rem;
+        height: 2.7rem;
+        margin-left: 1.5rem
+    }
+
+    .okButtonHover {
+        background-color: #E9C46A;
+        color: #264653
+    }
+
+    .buttonArrow {
+        justify-self: end;
+    }
+
+    .buttonArrowDesktop {
+        margin-left: 0.938rem;
+    }
+
+    .arrowNext {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .arrowNextDesktop {
+        width: 4rem;
+        height: 4rem;
+    }
     .cardfilm {
         background-color: rgb(38, 70, 83);
         display: flex;
@@ -11,12 +153,10 @@
         align-content: space-around;
         justify-content: center;
         align-items: center;
-    
-
     }
-.cardfilmTitle{
-    background-color: #FAF9F0;
-    border-radius: 8px;
-    padding: 8px 50px;
-}
+    .cardfilmTitle{
+      background-color: #FAF9F0;
+      border-radius: 8px;
+      padding: 8px 50px;
+    }
 }
