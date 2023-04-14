@@ -1,6 +1,6 @@
 import "./App.css";
-import Responses from "./assets/components/Responses";
-import Score from "./assets/components/Score";
+import Responses from "./components/Responses";
+import Score from "./components/Score";
 
 function App() {
   return (
