@@ -65,4 +65,75 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   width: 50%;
   transform: translate(18px, -9px) rotatez(45deg);
 }
-/* BugerMenu */
+
+/* Tailwind */
+@layer utilities {
+    .inputButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputButtonDesktop {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .inputResponse {
+        width: 16rem;
+        height: 2.7rem;
+        padding-left: 0.5rem;
+        border-radius: 8px;
+        background-color: #FAF9F0;
+    }
+
+    .okArrow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1.4rem;
+    }
+
+    .okArrowDesktop {
+        margin-top: 0;
+        display: flex;
+    }
+
+    .okButton {
+        width: 5.4rem;
+        height: 1.7rem;
+        background-color: #FAF9F0;
+        box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+        border-radius: 0.5rem;
+        grid-column: 2;
+        align-self: center;
+    }
+
+    .okButtonDesktop {
+        width: 3.875rem;
+        height: 2.7rem;
+        margin-left: 1.5rem
+    }
+
+    .okButtonHover {
+        background-color: #E9C46A;
+        color: #264653
+    }
+
+    .buttonArrow {
+        justify-self: end;
+    }
+
+    .buttonArrowDesktop {
+        margin-left: 0.938rem;
+    }
+
+    .arrowNext {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .arrowNextDesktop {
+        width: 4rem;
+        height: 4rem;
+    }
+}
