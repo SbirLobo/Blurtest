@@ -1,9 +1,10 @@
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
-      <p className="bg-primary text-secondary">coucou</p>
+    <div className="h-screen">
+      <Footer />
     </div>
   );
 }
