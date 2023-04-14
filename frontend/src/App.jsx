@@ -3,9 +3,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-primary">
       <Header />
-      <p className="bg-primary text-secondary">coucou</p>
     </div>
   );
 }
