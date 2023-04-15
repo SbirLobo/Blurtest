@@ -2,7 +2,7 @@ import arrow from "../assets/chevron-forward-outline.svg";
 
 function UserResponse() {
   return (
-    <div className="inputButton md:inputButtonDesktop md:w-[90%]">
+    <form className="inputButton md:inputButtonDesktop md:w-[90%]">
       <input
         type="text"
         id="response"
@@ -12,7 +12,7 @@ function UserResponse() {
       />
       <div className="okArrow md:okArrowDesktop">
         <button
-          type="button"
+          type="submit"
           className="okButton hover:okButtonHover md:okButtonDesktop"
         >
           Ok
@@ -25,7 +25,7 @@ function UserResponse() {
           />
         </a>
       </div>
-    </div>
+    </form>
   );
 }
 
