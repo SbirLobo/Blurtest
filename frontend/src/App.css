@@ -75,6 +75,15 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   .active {
     transform: translate(0);
   }
+  .deskmenu {
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    text-align: left;
+    width: 12rem;
+    border-right: 1px solid white;
+  }
 
   .neumorphResponse {
     font-size: 11px;
@@ -82,7 +91,8 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     padding-left: 5px;
     border-radius: 2px;
     background: #faf9f0;
-    box-shadow: -5px 5px 4px #a09f9a, 5px -5px 4px #ffffff;
+    /* box-shadow: -5px 5px 4px #a09f9a, 5px -5px 4px #ffffff; */
+    box-shadow: 5px 5px 4px #dfded6, -5px -5px 4px #ffffff;
     margin: 5px 8px;
   }
   .neumorphResponse:first-child {
