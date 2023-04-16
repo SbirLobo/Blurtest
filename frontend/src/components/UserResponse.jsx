@@ -8,12 +8,12 @@ function UserResponse() {
         id="response"
         name="response"
         placeholder="Une idée ?"
-        className="inputResponse"
+        className="inputResponse md:text-xl"
       />
       <div className="okArrow md:okArrowDesktop">
         <button
           type="submit"
-          className="okButton hover:okButtonHover md:okButtonDesktop"
+          className="okButton hover:okButtonHover md:okButtonDesktop md:text-xl"
         >
           Ok
         </button>

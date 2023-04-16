@@ -1,4 +1,4 @@
-function Responses() {
+function ApiAnswers() {
   return (
     <section className="m-5 flex flex-col bg-secondary rounded-sm w-[70%] md:w-[90%]">
       <div className="neumorphResponse">
@@ -22,4 +22,4 @@ function Responses() {
     </section>
   );
 }
-export default Responses;
+export default ApiAnswers;
