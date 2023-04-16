@@ -92,7 +92,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     border-radius: 2px;
     background: #faf9f0;
     /* box-shadow: -5px 5px 4px #a09f9a, 5px -5px 4px #ffffff; */
-    box-shadow: 5px 5px 4px #dfded6, -5px -5px 4px #ffffff;
+    box-shadow: -5px 5px 4px #dfded6, 5px -5px 4px #ffffff;
     margin: 5px 8px;
   }
   .neumorphResponse:first-child {
