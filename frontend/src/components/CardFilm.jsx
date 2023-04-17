@@ -1,7 +1,7 @@
 function CardFilm() {
   return (
     <div className="cardfilm md:mt-0">
-      <h3 className="cardfilmTitle h-7 ">Theme</h3>
+      <h3 className="cardfilmTitle h-7 md:text-2xl">Theme</h3>
 
       <div className="mt-3 mb-2 overflow-hidden rounded">
         <img

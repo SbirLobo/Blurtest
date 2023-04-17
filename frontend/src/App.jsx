@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import CardFilm from "./components/CardFilm";
 import UserResponse from "./components/UserResponse";
-import Responses from "./components/Responses";
+import ApiAnswers from "./components/ApiAnswers";
 import Score from "./components/Score";
 import Footer from "./components/Footer";
 
@@ -17,7 +17,7 @@ function App() {
         <CardFilm />
         <div className="flex flex-col justify-end items-center">
           <UserResponse />
-          <Responses />
+          <ApiAnswers />
           <Score />
         </div>
       </div>

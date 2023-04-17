@@ -142,7 +142,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   }
 
   .okButtonDesktop {
-    width: 3.875rem;
+    /* width: 3.875rem; */
     height: 2.7rem;
     margin-left: 1.5rem;
   }
@@ -157,7 +157,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   }
 
   .buttonArrowDesktop {
-    margin-left: 0.938rem;
+    margin-left: 0.738rem;
   }
 
   .arrowNext {
