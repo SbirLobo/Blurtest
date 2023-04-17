@@ -68,95 +68,108 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 
 /* Tailwind */
 @layer utilities {
-    .neumorphResponse {
-      font-size: 11px;
-      padding-left: 5px;
-      border-radius: 2px;
-      background: #faf9f0;
-      box-shadow: -5px 5px 6px #a09f9a, 5px -5px 6px #ffffff;
-      margin: 8px;
-    }
-  
-    .inputButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .neumorphResponse {
+    font-size: 11px;
+    padding: 4px 0;
+    padding-left: 5px;
+    border-radius: 2px;
+    background: #faf9f0;
+    box-shadow: -5px 5px 4px #a09f9a, 5px -5px 4px #ffffff;
+    margin: 5px 8px;
+  }
+  .neumorphResponse:first-child {
+    margin-top: 8px;
+  }
+  .neumorphResponse:last-child {
+    margin-bottom: 8px;
+  }
+  .inputButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .inputButtonDesktop {
-        flex-direction: row;
-        justify-content: center;
-    }
+  .inputButtonDesktop {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-    .inputResponse {
-        width: 16rem;
-        height: 2.7rem;
-        padding-left: 0.5rem;
-        border-radius: 8px;
-        background-color: #FAF9F0;
-    }
+  .inputResponse {
+    width: 16rem;
+    height: 2.7rem;
+    padding-left: 0.5rem;
+    border-radius: 8px;
+    background-color: #faf9f0;
+  }
 
-    .okArrow {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 1.4rem;
-    }
+  .okArrow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0.5rem;
+  }
 
-    .okArrowDesktop {
-        margin-top: 0;
-        display: flex;
-    }
+  .okArrowDesktop {
+    margin-top: 0;
+    display: flex;
+  }
 
-    .okButton {
-        width: 5.4rem;
-        height: 1.7rem;
-        background-color: #FAF9F0;
-        box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-        border-radius: 0.5rem;
-        grid-column: 2;
-        align-self: center;
-    }
+  .okButton {
+    width: 5.4rem;
+    height: 1.7rem;
+    background-color: #faf9f0;
+    box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    grid-column: 2;
+    align-self: center;
+  }
 
-    .okButtonDesktop {
-        width: 3.875rem;
-        height: 2.7rem;
-        margin-left: 1.5rem
-    }
+  .okButtonDesktop {
+    /* width: 3.875rem; */
+    height: 2.7rem;
+    margin-left: 1.5rem;
+  }
 
-    .okButtonHover {
-        background-color: #E9C46A;
-        color: #264653
-    }
+  .okButtonHover {
+    background-color: #e9c46a;
+    color: #264653;
+  }
 
-    .buttonArrow {
-        justify-self: end;
-    }
+  .buttonArrow {
+    justify-self: end;
+  }
 
-    .buttonArrowDesktop {
-        margin-left: 0.938rem;
-    }
+  .buttonArrowDesktop {
+    margin-left: 0.738rem;
+  }
 
-    .arrowNext {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
+  .arrowNext {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 
-    .arrowNextDesktop {
-        width: 4rem;
-        height: 4rem;
-    }
-    .cardfilm {
-        background-color: rgb(38, 70, 83);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: space-around;
-        justify-content: center;
-        align-items: center;
-    }
-    .cardfilmTitle{
-      background-color: #FAF9F0;
-      border-radius: 8px;
-      padding: 8px 50px;
-    }
+  .arrowNextDesktop {
+    width: 4rem;
+    height: 4rem;
+  }
+  .cardfilm {
+    background-color: rgb(38, 70, 83);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  .cardfilmTitle {
+    background-color: #faf9f0;
+    border-radius: 8px;
+    /* padding: 0px 40px; */
+    width: fit-content;
+    padding: 0 20px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

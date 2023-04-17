@@ -2,18 +2,18 @@ import arrow from "../assets/chevron-forward-outline.svg";
 
 function UserResponse() {
   return (
-    <div className="inputButton md:inputButtonDesktop">
+    <form className="inputButton md:inputButtonDesktop md:w-[90%]">
       <input
         type="text"
         id="response"
         name="response"
         placeholder="Une idée ?"
-        className="inputResponse"
+        className="inputResponse md:text-xl"
       />
       <div className="okArrow md:okArrowDesktop">
         <button
-          type="button"
-          className="okButton hover:okButtonHover md:okButtonDesktop"
+          type="submit"
+          className="okButton hover:okButtonHover md:okButtonDesktop md:text-xl"
         >
           Ok
         </button>
@@ -25,7 +25,7 @@ function UserResponse() {
           />
         </a>
       </div>
-    </div>
+    </form>
   );
 }
 
