@@ -21,7 +21,6 @@ function App() {
           <Score />
         </div>
       </div>
-
       <Footer />
     </div>
   );
