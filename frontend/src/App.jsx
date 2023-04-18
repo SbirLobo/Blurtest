@@ -1,5 +1,4 @@
-import { React } from "react";
-import "./App.css";
+import React from "react";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import CardFilm from "./components/CardFilm";
@@ -7,7 +6,8 @@ import UserResponse from "./components/UserResponse";
 import ApiAnswers from "./components/ApiAnswers";
 import Score from "./components/Score";
 import Footer from "./components/Footer";
-import fakeData from "./data/fakeData.json"; // Fake data
+import fakeData from "./data/fakeData.json";
+import "./App.css";
 
 function App() {
   return (
