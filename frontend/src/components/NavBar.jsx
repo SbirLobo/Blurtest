@@ -20,7 +20,7 @@ function NavBar() {
         <a href="." className="p-5 xl:p-8 hover:text-tertiary">
           Accueil
         </a>
-        <a href="." className="p-5 xl:pl-8 hover:text-tertiary">
+        <a href="." className="p-5 xl:p-8 hover:text-tertiary">
           Profil
         </a>
         <a href="." className="p-5 xl:p-8 hover:text-tertiary">
