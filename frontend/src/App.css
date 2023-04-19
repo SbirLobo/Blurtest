@@ -91,7 +91,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     padding-left: 5px;
     border-radius: 2px;
     background: #faf9f0;
-    /* box-shadow: -5px 5px 4px #a09f9a, 5px -5px 4px #ffffff; */
     box-shadow: -5px 5px 4px #dfded6, 5px -5px 4px #ffffff;
     margin: 5px 8px;
   }
@@ -142,7 +141,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   }
 
   .okButtonDesktop {
-    /* width: 3.875rem; */
     height: 2.7rem;
     margin-left: 1.5rem;
   }
@@ -182,7 +180,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   .cardfilmTitle {
     background-color: #faf9f0;
     border-radius: 8px;
-    /* padding: 0px 40px; */
     width: fit-content;
     padding: 0 20px;
     vertical-align: middle;
