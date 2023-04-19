@@ -1,17 +1,7 @@
 import PropTypes from "prop-types";
 import arrow from "../assets/chevron-forward-outline.svg";
 
-function UserResponse({ setSubmitResponse }) {
-  // function handleChange(e) {
-  //   setInputMessage(e.target.value);
-  // }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    setSubmitResponse(e.target[0].value);
-    // console.log(e.target[0].value);
-  }
-
+function UserResponse({ handleSubmit }) {
   return (
     <form
       className="inputButton md:inputButtonDesktop md:w-[90%]"
@@ -23,7 +13,6 @@ function UserResponse({ setSubmitResponse }) {
         name="response"
         placeholder="Une idée ?"
         className="inputResponse md:text-xl"
-        // onChange={handleChange}
       />
       <div className="okArrow md:okArrowDesktop">
         <button
@@ -44,11 +33,8 @@ function UserResponse({ setSubmitResponse }) {
   );
 }
 
-/* À vérifier */
 UserResponse.propTypes = {
-  // inputMessage: PropTypes.string.isRequired,
-  // setInputMessage: PropTypes.string.isRequired,
-  setSubmitResponse: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.string.isRequired,
 };
 
 export default UserResponse;

@@ -10,11 +10,14 @@ import fakeData from "./data/fakeData.json";
 import "./App.css";
 
 function App() {
-  // const [inputMessage, setInputMessage] = useState("");
   const [submitResponse, setSubmitResponse] = useState("");
-  if (submitResponse === "Bonjour") {
-    console.info("Toto");
-  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitResponse(e.target[0].value);
+  };
+
+  console.info(submitResponse);
 
   return (
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
@@ -23,11 +26,7 @@ function App() {
       <div className="w-full md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
         <CardFilm testarr={fakeData.results[0]} />
         <div className="flex flex-col justify-end items-center">
-          <UserResponse
-            // inputMessage={inputMessage}
-            // setInputMessage={setInputMessage}
-            setSubmitResponse={setSubmitResponse}
-          />
+          <UserResponse handleSubmit={handleSubmit} />
           <ApiAnswers />
           <Score />
         </div>
