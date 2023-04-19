@@ -16,6 +16,9 @@ function App() {
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
 
+  /* test suivant */
+  const [next, setNext] = useState(false);
+
   useEffect(() => {
     axios.get(API).then((response) => {
       const movieData = response.data.results[randomFilm];
@@ -32,7 +35,7 @@ function App() {
         setCredits(creditsResponse.data);
       });
     });
-  }, []);
+  }, [next]);
 
   const filmTitle = movie.title;
   const filmYear = movie.release_date ? movie.release_date.split("-")[0] : "";
@@ -41,16 +44,15 @@ function App() {
     : "";
   const filmActing1 = credits.cast ? credits.cast[0].name : "";
   const filmActing2 = credits.cast ? credits.cast[1].name : "";
-  console.info(filmActing2);
 
   return (
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
       <Header />
       <NavBar />
-      <div className="w-full md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
+      <div className="md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
         <CardFilm testarr={movie} />
         <div className="flex flex-col justify-end items-center">
-          <UserResponse />
+          <UserResponse next={next} setNext={setNext} />
           <ApiAnswers
             filmTitle={filmTitle}
             filmYear={filmYear}
