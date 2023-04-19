@@ -14,7 +14,7 @@ function App() {
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
       <Header />
       <NavBar />
-      <div className="w-full md:flex md:flex-row xl:md:justify-center gap-10 ml-[191px]">
+      <div className="w-full md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
         <CardFilm testarr={fakeData.results[0]} />
         <div className="flex flex-col justify-end items-center">
           <UserResponse />
