@@ -14,14 +14,13 @@ const API = fakeData.results[0];
 //  const filmId = API.id;
 //  const credit = `https://api.themoviedb.org/3/movie/${filmId}/credits?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR`;
 const fakeCredit = credit;
-//  "job": "director"
-const filmTitle = API.title.toLowerCase();
+const filmTitle = API.title;
 const filmYear = API.release_date.split("-")[0];
-const filmDirector = fakeCredit.crew
-  .filter((crewItem) => crewItem.job === "Director")[0]
-  .name.toLowerCase();
-const filmActing1 = fakeCredit.cast[0].name.toLowerCase();
-const filmActing2 = fakeCredit.cast[1].name.toLowerCase();
+const filmDirector = fakeCredit.crew.filter(
+  (crewItem) => crewItem.job === "Director"
+)[0].name;
+const filmActing1 = fakeCredit.cast[0].name;
+const filmActing2 = fakeCredit.cast[1].name;
 
 function App() {
   return (
