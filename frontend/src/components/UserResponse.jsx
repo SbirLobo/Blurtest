@@ -15,7 +15,7 @@ function UserResponse({ next, setNext, handleSubmit }) {
 
     return () => clearInterval(timer);
   }, [timeLeft]);
-  
+
   const handleClick = () => {
     setNext(!next);
   };
