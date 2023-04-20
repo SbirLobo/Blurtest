@@ -18,7 +18,7 @@ function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
 
   const handleClick = () => {
     setNext(!next);
-    setBlurAnimation();
+    setBlurAnimation(null);
   };
 
   return (
