@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-secondary w-full h-12 justify-around items-center absolute bottom-0 hidden md:flex">
+    <footer className="bg-secondary w-full h-12 justify-around items-center md:absolute bottom-0 flex">
       <div className="absolute left-10">
         <img src="./src/assets/copyright.svg" alt="Copyright" className="h-2" />
       </div>

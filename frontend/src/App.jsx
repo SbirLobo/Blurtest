@@ -24,6 +24,7 @@ function App() {
   const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${randomPage}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
+  const [blurAnimation, setBlurAnimation] = useState("affiche");
 
   /* Question suivante */
   const [next, setNext] = useState(false);
@@ -42,6 +43,7 @@ function App() {
 
         setMovie(movieResponse.data.results[randomFilm]);
         setCredits(creditsResponse.data);
+        setBlurAnimation("affiche");
       });
     });
   }, [next]);
@@ -58,13 +60,14 @@ function App() {
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
       <Header />
       <NavBar />
-      <div className="md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
-        <CardFilm testarr={movie} />
-        <div className="flex flex-col justify-center items-center">
+      <div className="w-full xl:w-auto md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
+        <CardFilm testarr={movie} blurAnimation={blurAnimation} />
+        <div className="flex flex-col justify-end items-center">
           <UserResponse
             next={next}
             setNext={setNext}
             handleSubmit={handleSubmit}
+            setBlurAnimation={setBlurAnimation}
           />
           <ApiAnswers
             filmTitle={filmTitle}

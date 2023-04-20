@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import arrow from "../assets/chevron-forward-outline.svg";
 
-function UserResponse({ next, setNext, handleSubmit }) {
+function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
   const [timeLeft, setTimeLeft] = useState(5);
 
   useEffect(() => {
@@ -18,6 +18,7 @@ function UserResponse({ next, setNext, handleSubmit }) {
 
   const handleClick = () => {
     setNext(!next);
+    setBlurAnimation(null);
   };
 
   return (
@@ -58,6 +59,7 @@ function UserResponse({ next, setNext, handleSubmit }) {
 UserResponse.propTypes = {
   next: PropTypes.bool.isRequired,
   setNext: PropTypes.func.isRequired,
+  setBlurAnimation: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 };
 
