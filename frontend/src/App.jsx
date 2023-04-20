@@ -10,14 +10,14 @@ import fakeData from "./data/fakeData.json";
 import "./App.css";
 
 function App() {
-  const [submitResponse, setSubmitResponse] = useState("");
+  // Suppression de submitResponse dans la destructuration du state parce que valeur non déclarée
+  // À rajouter quand on l'utilisera
+  const [setSubmitResponse] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitResponse(e.target[0].value);
   };
-
-  console.info(submitResponse);
 
   return (
     <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">

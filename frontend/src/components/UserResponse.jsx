@@ -21,7 +21,7 @@ function UserResponse({ handleSubmit }) {
         >
           Ok
         </button>
-        <a href="." className="buttonArrow md:buttonArrowDesktop">
+        <a href="!#" className="buttonArrow md:buttonArrowDesktop">
           <img
             className="arrowNext md:arrowNextDesktop"
             src={arrow}
