@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
 import arrow from "../assets/chevron-forward-outline.svg";
 
-function UserResponse({ next, setNext }) {
+function UserResponse({ next, setNext, handleSubmit }) {
   const handleClick = () => {
     setNext(!next);
   };
 
   return (
-    <form className="inputButton md:inputButtonDesktop md:w-[90%]">
+    <form
+      className="inputButton md:inputButtonDesktop md:w-[90%]"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         id="response"
@@ -41,6 +44,7 @@ function UserResponse({ next, setNext }) {
 UserResponse.propTypes = {
   next: PropTypes.bool.isRequired,
   setNext: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default UserResponse;

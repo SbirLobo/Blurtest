@@ -10,13 +10,22 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  // Suppression de submitResponse dans la destructuration du state parce que valeur non déclarée
+  // À rajouter quand on l'utilisera
+  const [setSubmitResponse] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitResponse(e.target[0].value);
+  };
+
   const randomPage = Math.floor(Math.random() * 9) + 1;
   const randomFilm = Math.floor(Math.random() * 20);
   const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${randomPage}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
 
-  /* test suivant */
+  /* Question suivante */
   const [next, setNext] = useState(false);
 
   useEffect(() => {
@@ -52,7 +61,11 @@ function App() {
       <div className="md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
         <CardFilm testarr={movie} />
         <div className="flex flex-col justify-end items-center">
-          <UserResponse next={next} setNext={setNext} />
+          <UserResponse
+            next={next}
+            setNext={setNext}
+            handleSubmit={handleSubmit}
+          />
           <ApiAnswers
             filmTitle={filmTitle}
             filmYear={filmYear}
