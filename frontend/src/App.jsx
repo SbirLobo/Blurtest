@@ -60,7 +60,7 @@ function App() {
       <NavBar />
       <div className="md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
         <CardFilm testarr={movie} />
-        <div className="flex flex-col justify-end items-center">
+        <div className="flex flex-col justify-center items-center">
           <UserResponse
             next={next}
             setNext={setNext}
