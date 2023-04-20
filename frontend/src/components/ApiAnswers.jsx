@@ -8,7 +8,7 @@ function ApiAnswers({
   filmActing2,
 }) {
   return (
-    <section className="m-5 flex flex-col bg-secondary rounded w-[70%] md:w-[90%]">
+    <section className="m-5 flex flex-col bg-secondary rounded w-[70%] md:w-[90%] xl:w-full">
       <div className="neumorphResponse">
         <p className="md:text-xl">
           Titre : <span className="font-bold">{filmTitle}</span>{" "}
