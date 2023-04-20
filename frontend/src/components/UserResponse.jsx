@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import arrow from "../assets/chevron-forward-outline.svg";
 
-function UserResponse() {
+function UserResponse({ next, setNext, handleSubmit }) {
   const [timeLeft, setTimeLeft] = useState(5);
 
   useEffect(() => {
@@ -14,9 +15,16 @@ function UserResponse() {
 
     return () => clearInterval(timer);
   }, [timeLeft]);
+  
+  const handleClick = () => {
+    setNext(!next);
+  };
 
   return (
-    <form className="inputButton md:inputButtonDesktop md:w-[90%]">
+    <form
+      className="inputButton md:inputButtonDesktop md:w-[90%]"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         id="response"
@@ -31,16 +39,26 @@ function UserResponse() {
         >
           Ok
         </button>
-        <a href="www.google.fr" className="buttonArrow md:buttonArrowDesktop">
+        <button
+          type="button"
+          onClick={handleClick}
+          className="buttonArrow md:buttonArrowDesktop"
+        >
           <img
             className="arrowNext md:arrowNextDesktop"
             src={arrow}
             alt="Flèche suivante"
           />
-        </a>
+        </button>
       </div>
     </form>
   );
 }
+
+UserResponse.propTypes = {
+  next: PropTypes.bool.isRequired,
+  setNext: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+};
 
 export default UserResponse;
