@@ -1,6 +1,20 @@
+import React, { useState, useEffect } from "react";
 import arrow from "../assets/chevron-forward-outline.svg";
 
 function UserResponse() {
+  const [timeLeft, setTimeLeft] = useState(5);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(timeLeft - 1);
+    }, 1000);
+    if (timeLeft === 0) {
+      clearInterval(timer);
+    }
+
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
   return (
     <form className="inputButton md:inputButtonDesktop md:w-[90%]">
       <input
