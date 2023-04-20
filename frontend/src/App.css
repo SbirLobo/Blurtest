@@ -68,95 +68,148 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 
 /* Tailwind */
 @layer utilities {
-    .neumorphResponse {
-      font-size: 11px;
-      padding-left: 5px;
-      border-radius: 2px;
-      background: #faf9f0;
-      box-shadow: -5px 5px 6px #a09f9a, 5px -5px 6px #ffffff;
-      margin: 8px;
-    }
-  
-    .inputButton {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .menu {
+    transform: translateY(-110%);
+    transition: transform 0.4s ease-out;
+    z-index: 5;
+  }
+  .active {
+    transform: translate(0);
+  }
+  .deskmenu {
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: center;
+    text-align: left;
+    width: 12rem;
+    border-right: 1px solid white;
+  }
 
-    .inputButtonDesktop {
-        flex-direction: row;
-        justify-content: center;
-    }
+  footer {
+    z-index: 6;
+  }
 
-    .inputResponse {
-        width: 16rem;
-        height: 2.7rem;
-        padding-left: 0.5rem;
-        border-radius: 8px;
-        background-color: #FAF9F0;
-    }
+  .neumorphResponse {
+    font-size: 11px;
+    padding: 4px 0;
+    padding-left: 5px;
+    border-radius: 2px;
+    background: #faf9f0;
+    box-shadow: -5px 5px 4px #dfded6, 5px -5px 4px #ffffff;
+    margin: 5px 8px;
+  }
+  .neumorphResponse:first-child {
+    margin-top: 8px;
+  }
+  .neumorphResponse:last-child {
+    margin-bottom: 8px;
+  }
+  .inputButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .okArrow {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 1.4rem;
-    }
+  .inputButtonDesktop {
+    flex-direction: row;
+    justify-content: center;
+  }
 
-    .okArrowDesktop {
-        margin-top: 0;
-        display: flex;
-    }
+  .inputResponse {
+    width: 16rem;
+    height: 2.7rem;
+    padding-left: 0.5rem;
+    border-radius: 8px;
+    background-color: #faf9f0;
+  }
 
-    .okButton {
-        width: 5.4rem;
-        height: 1.7rem;
-        background-color: #FAF9F0;
-        box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
-        border-radius: 0.5rem;
-        grid-column: 2;
-        align-self: center;
-    }
+  .okArrow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0.5rem;
+  }
 
-    .okButtonDesktop {
-        width: 3.875rem;
-        height: 2.7rem;
-        margin-left: 1.5rem
-    }
+  .okArrowDesktop {
+    margin-top: 0;
+    display: flex;
+  }
 
-    .okButtonHover {
-        background-color: #E9C46A;
-        color: #264653
-    }
+  .okButton {
+    width: 5.4rem;
+    height: 1.7rem;
+    background-color: #faf9f0;
+    box-shadow: -0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    grid-column: 2;
+    align-self: center;
+  }
 
-    .buttonArrow {
-        justify-self: end;
-    }
+  .okButtonDesktop {
+    height: 2.7rem;
+    margin-left: 1.5rem;
+  }
 
-    .buttonArrowDesktop {
-        margin-left: 0.938rem;
-    }
+  .okButtonHover {
+    background-color: #e9c46a;
+    color: #264653;
+  }
 
-    .arrowNext {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
+  .buttonArrow {
+    justify-self: end;
+  }
 
-    .arrowNextDesktop {
-        width: 4rem;
-        height: 4rem;
-    }
-    .cardfilm {
-        background-color: rgb(38, 70, 83);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-content: space-around;
-        justify-content: center;
-        align-items: center;
-    }
-    .cardfilmTitle{
-      background-color: #FAF9F0;
-      border-radius: 8px;
-      padding: 8px 50px;
-    }
+  .buttonArrowDesktop {
+    margin-left: 0.738rem;
+  }
+
+  .arrowNext {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .arrowNextDesktop {
+    width: 4rem;
+    height: 4rem;
+  }
+  .cardfilm {
+    background-color: rgb(38, 70, 83);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  .affiche {
+    filter: blur(40);
+    animation: blur-animation 45s;
+    margin-top: 0px;
+  }
+  .cardfilmTitle {
+    background-color: #faf9f0;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 0 20px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes blur-animation {
+  0% {
+    filter: blur(40px);
+  }
+  15% {
+    filter: blur(20px);
+  }
+  90% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0);
+  }
 }
