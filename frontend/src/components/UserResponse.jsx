@@ -5,7 +5,7 @@ function UserResponse({ next, setNext, handleSubmit }) {
   const handleClick = () => {
     setNext(!next);
   };
-  
+
   return (
     <form
       className="inputButton md:inputButtonDesktop md:w-[90%]"
