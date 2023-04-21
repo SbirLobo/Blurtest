@@ -22,37 +22,42 @@ function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
   };
 
   return (
-    <form
-      className="inputButton md:inputButtonDesktop md:w-[90%]"
-      onSubmit={handleSubmit}
-    >
-      <input
-        type="text"
-        id="response"
-        name="response"
-        placeholder="Une idée ?"
-        className="inputResponse md:text-xl"
-      />
-      <div className="okArrow md:okArrowDesktop">
-        <button
-          type="submit"
-          className="okButton hover:okButtonHover md:okButtonDesktop md:text-xl"
-        >
-          Ok
-        </button>
-        <button
-          type="button"
-          onClick={handleClick}
-          className="buttonArrow md:buttonArrowDesktop"
-        >
-          <img
-            className="arrowNext md:arrowNextDesktop"
-            src={arrow}
-            alt="Flèche suivante"
-          />
-        </button>
-      </div>
-    </form>
+    <div className="infoBlockXl max-xl:hidden">
+      <h3 className="cardfilmTitle h-7 md:text-2xl mb-[5rem] max-xl:hidden">
+        Theme
+      </h3>
+      <form
+        className="inputButton md:inputButtonDesktop md:w-[90%]"
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="text"
+          id="response"
+          name="response"
+          placeholder="Une idée ?"
+          className="inputResponse md:text-xl"
+        />
+        <div className="okArrow md:okArrowDesktop">
+          <button
+            type="submit"
+            className="okButton hover:okButtonHover md:okButtonDesktop md:text-xl"
+          >
+            Ok
+          </button>
+          <button
+            type="button"
+            onClick={handleClick}
+            className="buttonArrow md:buttonArrowDesktop"
+          >
+            <img
+              className="arrowNext md:arrowNextDesktop"
+              src={arrow}
+              alt="Flèche suivante"
+            />
+          </button>
+        </div>
+      </form>
+    </div>
   );
 }
 

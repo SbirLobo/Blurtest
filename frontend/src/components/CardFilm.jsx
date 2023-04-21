@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 
 function CardFilm({ testarr, blurAnimation }) {
   return (
-    <div className="cardfilm md:mt-0 xl:w-full">
-      <h3 className="cardfilmTitle h-7 md:text-2xl mb-10">Theme</h3>
+    <div className="cardfilm md:mt-0">
+      <h3 className="cardfilmTitle h-7 md:text-2xl mb-5 xl:hidden">Theme</h3>
 
       <div className=" mt-3 mb-2 overflow-hidden rounded xl:w-[400px]">
         <img
