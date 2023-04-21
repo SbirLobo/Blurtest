@@ -55,6 +55,8 @@ function App() {
     });
   }, [next]);
 
+  if (isLoading) return <div>Loading...</div>;
+
   const filmTitle = movie.title;
   const filmYear = movie.release_date.split("-")[0];
   const filmDirector = credits.crew.filter(
@@ -62,8 +64,6 @@ function App() {
   )[0].name;
   const filmActing1 = credits.cast[0].name;
   const filmActing2 = credits.cast[1].name;
-
-  if (isLoading) return <div>Loading...</div>;
 
   if (submitResponse === filmTitle) {
     return null;
