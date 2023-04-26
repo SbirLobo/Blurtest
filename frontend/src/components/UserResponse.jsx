@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import arrow from "../assets/chevron-forward-outline.svg";
 
 function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
   const handleClick = () => {
@@ -37,7 +36,7 @@ function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
           >
             <img
               className="arrowNext md:arrowNextDesktop"
-              src={arrow}
+              src="../assets/chevron-forward-outline.svg"
               alt="Flèche suivante"
             />
           </button>
