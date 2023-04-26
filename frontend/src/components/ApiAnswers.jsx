@@ -32,7 +32,7 @@ function ApiAnswers({
           <span className={`font-bold ${showResultReal}`}>{filmDirector}</span>
         </p>
       </div>
-      <div className="neumorphResponse">
+      <div className="neumorphResponse h-[57.5px] md:h-[92px] xl:h-[84]">
         <p className="md:text-xl">Acteurs Principaux :</p>
         <p className={`md:text-xl font-bold ${showResultActing1}`}>
           {filmActing1}
