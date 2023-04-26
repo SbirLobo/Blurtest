@@ -9,6 +9,21 @@ import Score from "./components/Score";
 import Footer from "./components/Footer";
 import "./App.css";
 
+const pageIndex = [];
+const filmIndex = [];
+for (let i = 0; i < 7; i += 1) {
+  let randomPage = 0;
+  let randomFilm = 0;
+  do {
+    randomPage = Math.floor(Math.random() * 99) + 1;
+  } while (pageIndex.includes(randomPage));
+  do {
+    randomFilm = Math.floor(Math.random() * 20);
+  } while (filmIndex.includes(randomFilm));
+  pageIndex.push(randomPage);
+  filmIndex.push(randomFilm);
+}
+
 function App() {
   const [next, setNext] = useState(true);
   const [submitResponse, setSubmitResponse] = useState("");
@@ -19,9 +34,8 @@ function App() {
   const [showResultActing1, setShowResultActing1] = useState("hidden");
   const [showResultActing2, setShowResultActing2] = useState("hidden");
 
-  const randomPage = Math.floor(Math.random() * 99) + 1;
-  const randomFilm = Math.floor(Math.random() * 20);
-  const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${randomPage}`;
+  const [index, setIndex] = useState(0);
+  const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
   const [blurAnimation, setBlurAnimation] = useState("affiche");
@@ -46,7 +60,7 @@ function App() {
 
   useEffect(() => {
     axios.get(API).then((response) => {
-      const movieData = response.data.results[randomFilm];
+      const movieData = response.data.results[filmIndex[index]];
       const creditsAPI = `https://api.themoviedb.org/3/movie/${movieData.id}/credits?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR`;
 
       const moviePromise = axios.get(API);
@@ -58,7 +72,7 @@ function App() {
           const movieResponse = responses[0];
           const creditsResponse = responses[1];
 
-          setMovie(movieResponse.data.results[randomFilm]);
+          setMovie(movieResponse.data.results[filmIndex[index]]);
           setCredits(creditsResponse.data);
           setBlurAnimation("affiche");
           setShowResultTitle("hidden");
@@ -66,6 +80,7 @@ function App() {
           setShowResultReal("hidden");
           setShowResultActing1("hidden");
           setShowResultActing2("hidden");
+          setIndex(index + 1);
         })
         .finally(() => {
           setIsLoading(false);
