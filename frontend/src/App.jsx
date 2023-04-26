@@ -12,8 +12,16 @@ import "./App.css";
 const pageIndex = [];
 const filmIndex = [];
 for (let i = 0; i < 7; i += 1) {
-  pageIndex.push(Math.floor(Math.random() * 99) + 1);
-  filmIndex.push(Math.floor(Math.random() * 20));
+  let randomPage = 0;
+  let randomFilm = 0;
+  do {
+    randomPage = Math.floor(Math.random() * 99) + 1;
+  } while (pageIndex.includes(randomPage));
+  do {
+    randomFilm = Math.floor(Math.random() * 20);
+  } while (filmIndex.includes(randomFilm));
+  pageIndex.push(randomPage);
+  filmIndex.push(randomFilm);
 }
 
 function App() {
@@ -25,7 +33,7 @@ function App() {
     e.target.reset();
   };
 
-  const [index, setindex] = useState(0);
+  const [index, setIndex] = useState(0);
   const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
@@ -51,7 +59,7 @@ function App() {
           setMovie(movieResponse.data.results[filmIndex[index]]);
           setCredits(creditsResponse.data);
           setBlurAnimation("affiche");
-          setindex(index + 1);
+          setIndex(index + 1);
         })
         .finally(() => {
           setIsLoading(false);
