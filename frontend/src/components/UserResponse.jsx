@@ -22,7 +22,7 @@ function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
   };
 
   return (
-    <div className="infoBlockXl max-xl:hidden">
+    <div className="infoBlockXl">
       <h3 className="cardfilmTitle h-7 md:text-2xl mb-[5rem] max-xl:hidden">
         Theme
       </h3>
