@@ -1,21 +1,7 @@
 import PropTypes from "prop-types";
-import React, { useState, useEffect } from "react";
 import arrow from "../assets/chevron-forward-outline.svg";
 
 function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
-  const [timeLeft, setTimeLeft] = useState(5);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(timeLeft - 1);
-    }, 1000);
-    if (timeLeft === 0) {
-      clearInterval(timer);
-    }
-
-    return () => clearInterval(timer);
-  }, [timeLeft]);
-
   const handleClick = () => {
     setNext(!next);
     setBlurAnimation(null);

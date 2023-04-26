@@ -10,16 +10,14 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
-  // Suppression de submitResponse dans la destructuration du state parce que valeur non déclarée
-  // À rajouter quand on l'utilisera
+  const [next, setNext] = useState(true);
   const [submitResponse, setSubmitResponse] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitResponse(e.target[0].value);
-    e.target.reset();
-  };
+  const [showResultTitle, setShowResultTitle] = useState("hidden");
+  const [showResultYear, setShowResultYear] = useState("hidden");
+  const [showResultReal, setShowResultReal] = useState("hidden");
+  const [showResultActing1, setShowResultActing1] = useState("hidden");
+  const [showResultActing2, setShowResultActing2] = useState("hidden");
 
   const randomPage = Math.floor(Math.random() * 99) + 1;
   const randomFilm = Math.floor(Math.random() * 20);
@@ -28,8 +26,23 @@ function App() {
   const [credits, setCredits] = useState({});
   const [blurAnimation, setBlurAnimation] = useState("affiche");
 
-  /* Question suivante */
-  const [next, setNext] = useState(true);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitResponse(e.target[0].value);
+    e.target.reset();
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setShowResultTitle("");
+      setShowResultYear("");
+      setShowResultReal("");
+      setShowResultActing1("");
+      setShowResultActing2("");
+    }, 45000);
+
+    return () => clearInterval(timer);
+  }, [next]);
 
   useEffect(() => {
     axios.get(API).then((response) => {
@@ -48,6 +61,11 @@ function App() {
           setMovie(movieResponse.data.results[randomFilm]);
           setCredits(creditsResponse.data);
           setBlurAnimation("affiche");
+          setShowResultTitle("hidden");
+          setShowResultYear("hidden");
+          setShowResultReal("hidden");
+          setShowResultActing1("hidden");
+          setShowResultActing2("hidden");
         })
         .finally(() => {
           setIsLoading(false);
@@ -65,8 +83,25 @@ function App() {
   const filmActing1 = credits.cast[0].name;
   const filmActing2 = credits.cast[1].name;
 
-  if (submitResponse === filmTitle) {
-    return null;
+  if (submitResponse.toLowerCase() === filmTitle.toLowerCase()) {
+    setShowResultTitle("");
+    setSubmitResponse("");
+  }
+  if (submitResponse.toLowerCase() === filmYear.toLowerCase()) {
+    setShowResultYear("");
+    setSubmitResponse("");
+  }
+  if (submitResponse.toLowerCase() === filmDirector.toLowerCase()) {
+    setShowResultReal("");
+    setSubmitResponse("");
+  }
+  if (submitResponse.toLowerCase() === filmActing1.toLowerCase()) {
+    setShowResultActing1("");
+    setSubmitResponse("");
+  }
+  if (submitResponse.toLowerCase() === filmActing2.toLowerCase()) {
+    setShowResultActing2("");
+    setSubmitResponse("");
   }
 
   return (
@@ -88,6 +123,11 @@ function App() {
             filmDirector={filmDirector}
             filmActing1={filmActing1}
             filmActing2={filmActing2}
+            showResultTitle={showResultTitle}
+            showResultYear={showResultYear}
+            showResultReal={showResultReal}
+            showResultActing1={showResultActing1}
+            showResultActing2={showResultActing2}
           />
           <Score />
         </div>
