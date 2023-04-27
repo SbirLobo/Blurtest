@@ -1,11 +1,17 @@
-function Score() {
+import PropTypes from "prop-types";
+
+function Score({ score }) {
   return (
     <div className="mb-8">
       <p className="text-2xl text-secondary mb-5 flex justify-center">
-        Score :
+        Score : {score}
       </p>
     </div>
   );
 }
+
+Score.propTypes = {
+  score: PropTypes.number.isRequired,
+};
 
 export default Score;
