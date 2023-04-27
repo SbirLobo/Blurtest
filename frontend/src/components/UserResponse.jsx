@@ -36,7 +36,7 @@ function UserResponse({ next, setNext, handleSubmit, setBlurAnimation }) {
           >
             <img
               className="arrowNext md:arrowNextDesktop"
-              src="../assets/chevron-forward-outline.svg"
+              src="./assets/chevron-forward-outline.svg"
               alt="Flèche suivante"
             />
           </button>
