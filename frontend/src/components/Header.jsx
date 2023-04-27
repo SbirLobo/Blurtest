@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import Logo from "../assets/Blogo.png";
 
 function Header() {
   return (
     <header className="w-full h-16 bg-secondary p-2 flex items-center absolute top-0 z-10">
       <Link to="/">
-        <img src={Logo} alt="Blur Logo" className="h-16 mr-2 p-1" />
+        <img
+          src="./assets/Blogo.png"
+          alt="Blur Logo"
+          className="h-16 mr-2 p-1"
+        />
       </Link>
       <Link to="/">
         <h1 className="text-5xl font-playfair">

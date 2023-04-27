@@ -21,7 +21,6 @@ for (let i = 0; i < 7; i += 1) {
 }
 
 function Jeux() {
-  //   const { id, name } = useParams(); // ID DU GENRE
   const [next, setNext] = useState(true);
   const [submitResponse, setSubmitResponse] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -31,8 +30,9 @@ function Jeux() {
   const [showResultActing1, setShowResultActing1] = useState("hidden");
   const [showResultActing2, setShowResultActing2] = useState("hidden");
 
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const [index, setIndex] = useState(0);
-  const API = `https://api.themoviedb.org/3/discover/movie?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}`;
+  const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
   const [blurAnimation, setBlurAnimation] = useState("affiche");
@@ -58,7 +58,7 @@ function Jeux() {
   useEffect(() => {
     axios.get(API).then((response) => {
       const movieData = response.data.results[filmIndex[index]];
-      const creditsAPI = `https://api.themoviedb.org/3/movie/${movieData.id}/credits?api_key=7d7003faa5a830e64ad23a79fc1e7657&language=fr-FR`;
+      const creditsAPI = `https://api.themoviedb.org/3/movie/${movieData.id}/credits?api_key=${API_KEY}&language=fr-FR`;
 
       const moviePromise = axios.get(API);
       const creditsPromise = axios.get(creditsAPI);
