@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RulesPage() {
+function RulesPage() {
   return (
     <div>
       <h1>Règles</h1>
@@ -8,4 +8,4 @@ export default function RulesPage() {
     </div>
   );
 }
-export { RulesPage };
+export default RulesPage;

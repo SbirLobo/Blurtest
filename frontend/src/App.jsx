@@ -3,29 +3,29 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import "./App.css";
-import Home from "./pages/HomePage";
-import JeuxComp from "./components/Jeux";
-import Profile from "./pages/ProfilePage";
-import Contact from "./pages/ContactPage";
-import Rules from "./pages/RulesPage";
+import HomePage from "./pages/HomePage";
+import Jeux from "./components/Jeux";
+import ProfilePage from "./pages/ProfilePage";
+import ContactPage from "./pages/ContactPage";
+import RulesPage from "./pages/RulesPage";
 import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
-      <Header />
-      <NavBar />
-      <Router>
+    <Router>
+      <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
+        <Header />
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/themes/:name/:id" element={<JeuxComp />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/rules" element={<Rules />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/game" element={<Jeux />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/rules" element={<RulesPage />} />
         </Routes>
-      </Router>
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

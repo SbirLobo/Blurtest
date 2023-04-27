@@ -21,7 +21,7 @@ for (let i = 0; i < 7; i += 1) {
   filmIndex.push(randomFilm);
 }
 
-export default function Jeux() {
+function Jeux() {
   //   const { id, name } = useParams(); // ID DU GENRE
   const [next, setNext] = useState(true);
   const [submitResponse, setSubmitResponse] = useState("");
@@ -144,4 +144,4 @@ export default function Jeux() {
     </div>
   );
 }
-export { Jeux };
+export default Jeux;

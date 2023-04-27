@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [active, setActive] = useState("");
@@ -17,18 +18,18 @@ function NavBar() {
       <nav
         className={`bg-secondary absolute flex flex-col max-xl:right-0 top-16 text-center rounded-bl-md menu ${active} xl:deskmenu xl:active xl:bg-primary xl:text-secondary`}
       >
-        <a href="/" className="p-5 xl:p-8 hover:text-tertiary">
+        <Link to="/" className="p-5 xl:p-8 hover:text-tertiary">
           Accueil
-        </a>
-        <a href="/profile" className="p-5 xl:p-8 hover:text-tertiary">
+        </Link>
+        <Link to="/profile" className="p-5 xl:p-8 hover:text-tertiary">
           Profil
-        </a>
-        <a href="/rules" className="p-5 xl:p-8 hover:text-tertiary">
+        </Link>
+        <Link to="/rules" className="p-5 xl:p-8 hover:text-tertiary">
           Règles du jeu
-        </a>
-        <a href="/contact" className="p-5 xl:p-8 hover:text-tertiary">
+        </Link>
+        <Link to="/contact" className="p-5 xl:p-8 hover:text-tertiary">
           Contact
-        </a>
+        </Link>
       </nav>
     </>
   );
