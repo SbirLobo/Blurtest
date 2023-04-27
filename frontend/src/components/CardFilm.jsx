@@ -16,14 +16,11 @@ function CardFilm({ testarr, blurAnimation }) {
   );
 }
 
-CardFilm.defaultProps = {
-  blurAnimation: "",
-};
 CardFilm.propTypes = {
   testarr: PropTypes.shape({
     poster_path: PropTypes.string.isRequired,
   }).isRequired,
   blurAnimation: PropTypes.string,
-};
+}.isRequired;
 
 export default CardFilm;

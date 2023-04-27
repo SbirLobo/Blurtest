@@ -29,6 +29,7 @@ function Jeux() {
   const [showResultReal, setShowResultReal] = useState("hidden");
   const [showResultActing1, setShowResultActing1] = useState("hidden");
   const [showResultActing2, setShowResultActing2] = useState("hidden");
+  const [score, setScore] = useState(0);
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   const [index, setIndex] = useState(0);
@@ -95,25 +96,45 @@ function Jeux() {
   const filmActing1 = credits.cast[0].name;
   const filmActing2 = credits.cast[1].name;
 
-  if (submitResponse.toLowerCase() === filmTitle.toLowerCase()) {
+  if (
+    submitResponse.toLowerCase() === filmTitle.toLowerCase() &&
+    showResultTitle === "hidden"
+  ) {
     setShowResultTitle("");
     setSubmitResponse("");
+    setScore(score + 100);
   }
-  if (submitResponse.toLowerCase() === filmYear.toLowerCase()) {
+  if (
+    submitResponse.toLowerCase() === filmYear.toLowerCase() &&
+    showResultYear === "hidden"
+  ) {
     setShowResultYear("");
     setSubmitResponse("");
+    setScore(score + 50);
   }
-  if (submitResponse.toLowerCase() === filmDirector.toLowerCase()) {
+  if (
+    submitResponse.toLowerCase() === filmDirector.toLowerCase() &&
+    showResultReal === "hidden"
+  ) {
     setShowResultReal("");
     setSubmitResponse("");
+    setScore(score + 50);
   }
-  if (submitResponse.toLowerCase() === filmActing1.toLowerCase()) {
+  if (
+    submitResponse.toLowerCase() === filmActing1.toLowerCase() &&
+    showResultActing1 === "hidden"
+  ) {
     setShowResultActing1("");
     setSubmitResponse("");
+    setScore(score + 60);
   }
-  if (submitResponse.toLowerCase() === filmActing2.toLowerCase()) {
+  if (
+    submitResponse.toLowerCase() === filmActing2.toLowerCase() &&
+    showResultActing2 === "hidden"
+  ) {
     setShowResultActing2("");
     setSubmitResponse("");
+    setScore(score + 40);
   }
 
   return (
@@ -138,7 +159,7 @@ function Jeux() {
           showResultActing1={showResultActing1}
           showResultActing2={showResultActing2}
         />
-        <Score />
+        <Score score={score} />
       </div>
     </div>
   );
