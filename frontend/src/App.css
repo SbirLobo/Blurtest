@@ -27,7 +27,7 @@ label {
 }
 
 label span {
-  background: theme("colors.primary");
+  background: black;
   border-radius: 10px;
   height: 7px;
   margin: 4px 0;
