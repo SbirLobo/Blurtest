@@ -30,6 +30,7 @@ function Jeux() {
   const [showResultActing1, setShowResultActing1] = useState("hidden");
   const [showResultActing2, setShowResultActing2] = useState("hidden");
   const [score, setScore] = useState(0);
+  const [endGame, setEndGame] = useState(false);
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   const [index, setIndex] = useState(0);
@@ -51,6 +52,9 @@ function Jeux() {
       setShowResultReal("");
       setShowResultActing1("");
       setShowResultActing2("");
+      if (index === 6) {
+        setEndGame(true);
+      }
     }, 45000);
 
     return () => clearInterval(timer);
@@ -146,6 +150,8 @@ function Jeux() {
           setNext={setNext}
           handleSubmit={handleSubmit}
           setBlurAnimation={setBlurAnimation}
+          endGame={endGame}
+          score={score}
         />
         <ApiAnswers
           filmTitle={filmTitle}
