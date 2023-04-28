@@ -2,7 +2,7 @@ import React from "react";
 
 function RulesPage() {
   return (
-    <div>
+    <div className="h-screen">
       <h1>Règles</h1>
       <p>Ceci est la page de règles.</p>
     </div>
