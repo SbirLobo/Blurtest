@@ -7,14 +7,18 @@ function UserResponse({
   setBlurAnimation,
   endGame,
   score,
+  index,
 }) {
   const handleClick = () => {
     setNext(!next);
-    setBlurAnimation(null);
+    if (index !== 7) {
+      setBlurAnimation(null);
+    }
   };
 
   const hiddenEndGame = !endGame ? "" : "hidden";
   const visibleEndGame = endGame ? "" : "hidden";
+
   let endText = "";
   if (score === 0) {
     endText =
@@ -101,6 +105,7 @@ UserResponse.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   endGame: PropTypes.bool.isRequired,
   score: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default UserResponse;

@@ -52,7 +52,7 @@ function Jeux() {
       setShowResultReal("");
       setShowResultActing1("");
       setShowResultActing2("");
-      if (index === 6) {
+      if (index === 7) {
         setEndGame(true);
       }
     }, 45000);
@@ -152,6 +152,7 @@ function Jeux() {
           setBlurAnimation={setBlurAnimation}
           endGame={endGame}
           score={score}
+          index={index}
         />
         <ApiAnswers
           filmTitle={filmTitle}
