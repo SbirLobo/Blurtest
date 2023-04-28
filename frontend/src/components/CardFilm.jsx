@@ -20,7 +20,7 @@ CardFilm.propTypes = {
   testarr: PropTypes.shape({
     poster_path: PropTypes.string.isRequired,
   }).isRequired,
-  blurAnimation: PropTypes.string.isRequired,
-};
+  blurAnimation: PropTypes.string,
+}.isRequired;
 
 export default CardFilm;
