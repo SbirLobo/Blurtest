@@ -18,7 +18,7 @@ function UserResponse({
 
   const hiddenEndGame = !endGame ? "" : "hidden";
   const visibleEndGame = endGame ? "" : "hidden";
-  // const hidden7thMovie = index === 7 ? "hidden" : "";
+
   let endText = "";
   if (score === 0) {
     endText =
