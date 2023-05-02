@@ -1,44 +1,77 @@
 ## Concept
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+The BlurTest is a game where the player has to guess the title of a film and/or the name(s) of the director, main actors and year of release, all within a given time.
+For this, the user will have the movie poster with an applied blur effect, which will fade as time passes. The player must enter a maximum information in 45 seconds,
+before the poster of the film becomes completely visible.
 
-## Setup & Use
+This BlurTest is brought to you by the Hufflepuff team, made of Chloé ELLE, Kylian GRONNIER, Sébastien BIROLLEAU, Vincent DAVIAUD and Pierre LACOSTE
 
-### Project Initialization
+---
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
-- Run command `npm install`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+## Installation
 
-### Available Commands
+- Clone the following Github repository: `git@github.com:WildCodeSchool/2023-02-JS-RemoteFR-JSWizards-P2-Team-Hufflepuff.git`
+- In VSCode, install the plugins **Prettier - Code formatter** and **ESLint** and configure them
+- Install dependencies with `npm install` command
+- Go to the page "https://developers.themoviedb.org/3/getting-started/authentication" to configure your own API key
+- In "./frontend/src", create a ".env" file and insert your API key. Example: "VITE_API_KEY=YOUR_API_KEY"
 
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+---
 
-## FAQ
+## Utilisation
 
-### Tools
+- Select a Theme
+- Answer as much information as possible about the film to earn points
+- Beat your own score
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+---
 
-### Deployment
+## Web site
 
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+<insérer image page d'accueil >
 
-- CAPROVER_BACK_APPNAME : name app on caprover
-- CAPROVER_FRONT_APPNAME : name app on caprover
-- CAPROVER_PASSWORD : password caprover
-- CAPROVER_SERVER : link of domain
+---
+
+## Contribution
+
+If you want to contribute to this project, you can:
+
+- Clone the GitHub depot
+- Create a new branch with your modifications
+- Send a Pull Request
+
+  The Hufflepuff team will examine the Pull Request in order to validate it or not
+
+---
+
+## Technologies Used
+
+![logo_js](https://user-images.githubusercontent.com/108263661/235681500-108db517-f686-49da-b937-32246bdd5ceb.png)
+![logo_css](https://user-images.githubusercontent.com/108263661/235681483-962515d4-a46d-497c-9478-dbc3a6a41446.png)
+![logo_html](https://user-images.githubusercontent.com/108263661/235681487-1fd7507a-fd32-467e-97e9-bbc3497b141e.png)
+
+![logo_react](https://user-images.githubusercontent.com/108263661/235681488-5db62f0b-e7e1-42a5-a8a1-487ddb777510.png)
+![logo_tailwind](https://user-images.githubusercontent.com/108263661/235681496-c7c5484e-8bd2-4218-9e0b-b9873db466b3.png)
+![logo_nodejs](https://user-images.githubusercontent.com/108263661/235681491-362cbd7b-ca1f-4c49-8897-7e479c8cdbf1.png)
+
+![logo_github](https://user-images.githubusercontent.com/108263661/235681498-99fa5275-8683-476e-873b-3d497326b118.png)
+![logo_figma](https://user-images.githubusercontent.com/108263661/235681494-407a12f6-145c-4c6a-975b-79c163b96262.png)
+
+---
+
+## License
+
+This project is under Wild Code School license. See the `License.md` file for more information
+
+---
+
+## Creators contact
+
+Chloé: https://github.com/Chl0l <br>
+Kylian: https://github.com/Kyxk <br>
+Sébastien: https://github.com/SbirLobo <br>
+Vincent: https://github.com/Vinchd <br>
+Pierre: https://github.com/PierreLacoste <br>
+
+under the benevolent gaze of Anthony Gorsky. <br>
+https://github.com/GorskiAnthony
