@@ -1,34 +1,44 @@
 ## Concept
 
-Ce template est conçu pour servir de base à tous les projets (P2/P3) suivants la stack React-Node-MySQL telle qu'enseignée à la Wild Code School. Il est préconfiguré avec un ensemble d'outils qui aideront les élèves à produire un code correspondant mieux aux standards du monde du travail et plus facile à maintenir, tout en restant simple à utiliser.
+Le BlurTest est un jeu dans lequel le joueur doit deviner le titre d'un film et/ou le(s) nom du réalisateur, acteurs principaux et année de sortie, le tout dans un temps imparti.
+Pour cela, l'utilisateur aura a disposition l'affiche du film avec un effet de flou appliqué, qui s'estompera a mesure que le temps s'écoule. Le joueur devra entré un maximum
+d'informations en 45 sencondes, avant que l'afiche du film ne deviennent completment visible.
 
-## Installation & Utilisation
+Ce BlurTest vous est présenté par l'équipe Pouffsoufle, composée de Chloé ELLE, Kylian GRONNIER, Sébastien BIROLLEAU, Vincent DAVIAUD et Pierre LACOSTE.
 
-### Pour commencer un projet
+## Installation
 
+- Cloner le dépôt Github suivant: `git@github.com:WildCodeSchool/2023-02-JS-RemoteFR-JSWizards-P2-Team-Hufflepuff.git`
 - Sur VSCode, installer les plugins **Prettier - Code formatter** et **ESLint** et les configurer
-- Cloner ce dépôt, se rendre à l'intérieur
-- Si vous utilisez `yarn` ou `pnpm`, adapter `config/cli` dans le fichier `package.json`
-- Lancer la commande `npm install`
-- _NB: Pour exécuter le backend, un fichier d'environnement avec les données de connexion d'une BdD valide est nécesaire. Un modèle se trouve dans `backend/.env.sample`_
+- Installer les dépendances avec la commande `npm install`
+- Allez sur la page "https://developers.themoviedb.org/3/getting-started/authentication" pour configurer votre propre clé API
+- Dans "./frontend/src", créez un fichier ".env" et inserez votre clé API. Exemple : "VITE_API_KEY=YOUR_API_KEY"
 
-### Liste des commandes et signification
+## Utilisation
 
-- `migrate` : Exécute le script de création de la base de données
-- `dev` : Démarrage des deux serveurs (frontend + backend) dans un même terminal
-- `dev-front` : Démarrage d'un serveur React pour le frontend
-- `dev-back` : Démarrage d'un serveur Express pour le backend
-- `lint` : Exécute des outils de validation de code (sera exécutée automatiquement à chaque _commit_)
-- `fix` : Fixe les erreurs de formatage (à lancer si `lint` ne passe pas)
+- Séléctionner un Thème
+- Répondre a un maximum d'informations demandées sur le film
+- Battre son propre score
 
-## Pour plus d'informations
+## Contribution
 
-### Listing des outils utilisés
+Si vous souhaitez contribuer a ce projet, vous pouvez:
 
-- _Concurrently_ : Permet d'exécuter plusieurs commandes dans un même terminal
-- _Husky_ : Permet d'exécuter des actions en déclenchement de commandes _git_
-- _Vite_ : Alternative à _Create-React-App_, embarquant moins de packages pour une expérience plus fluide
-- _ESLint_ : Outil de "qualité de code", permet de s'assurer que des règles pré-configurées sont bien respectées
-- _Prettier_ : Outil de "qualité de code" également, se concentre plus particulièrement sur le style du code
-- _Standard Airbnb_ : L'un des "standards" les plus connus, même s'il n'est pas officiellement lié à ES/JS
-- _Nodemon_ : Outil permettant de relancer un serveur à chaque fois qu'un des fichiers est modifié
+- Cloner le dêpot Github
+- Créer une nouvelle branche avec vos modifications
+- Proposer une Pull Request
+
+  La team Pouffsoufle éxaminera la Pull Request afin de la valider ou non
+
+## Technologies Utilisées
+
+- React
+- Node.js
+- TailwindCss
+- VsCode
+- GitHub
+- Figma
+
+## Licence
+
+Ce projet est sous licence Wild Code School. Voir le fichier `License.md` pour plus d'informations

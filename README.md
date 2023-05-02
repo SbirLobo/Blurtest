@@ -1,44 +1,44 @@
 ## Concept
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
+The BlurTest is a game where the player has to guess the title of a film and/or the name(s) of the director, main actors and year of release, all within a given time.
+For this, the user will have the movie poster with an applied blur effect, which will fade as time passes. The player must enter a maximum information in 45 seconds,
+before the poster of the film becomes completely visible.
 
-## Setup & Use
+This BlurTest is brought to you by the Hufflepuff team, made of Chloé ELLE, Kylian GRONNIER, Sébastien BIROLLEAU, Vincent DAVIAUD and Pierre LACOSTE
 
-### Project Initialization
+## Installation
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- If you are using `yarn` or `pnpm`, adapt the `config/cli` in `package.json`
-- Run command `npm install`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+- Clone the following Github repository: `git@github.com:WildCodeSchool/2023-02-JS-RemoteFR-JSWizards-P2-Team-Hufflepuff.git`
+- In VSCode, install the plugins **Prettier - Code formatter** and **ESLint** and configure them
+- Install dependencies with `npm install` command
+- Go to the page "https://developers.themoviedb.org/3/getting-started/authentication" to configure your own API key
+- In "./frontend/src", create a ".env" file and insert your API key. Example: "VITE_API_KEY=YOUR_API_KEY"
 
-### Available Commands
+## Utilisation
 
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+- Select a Theme
+- Answer as much information as possible about the film to earn points
+- Beat your own score
 
-## FAQ
+## Contribution
 
-### Tools
+If you want to contribute to this project, you can:
 
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
+- Clone the GitHub depot
+- Create a new branch with your modifications
+- Send a Pull Request
 
-### Deployment
+  The Hufflepuff team will examine the Pull Request in order to validate it or not
 
-For deployment, you have to go to `secrets` → app `actions` on the github repo to insert via `New repository secret` :
+## Technologies Used
 
-- CAPROVER_BACK_APPNAME : name app on caprover
-- CAPROVER_FRONT_APPNAME : name app on caprover
-- CAPROVER_PASSWORD : password caprover
-- CAPROVER_SERVER : link of domain
+- React
+- Node.js
+- TailwindCss
+- VsCode
+- GitHub
+- Figma
+
+## License
+
+This project is under Wild Code School license. See the `License.md` file for more information

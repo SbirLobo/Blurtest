@@ -4,7 +4,7 @@ function RulesPage() {
   return (
     <div className="h-screen rulesPage md:rulesPageMd xl:rulesPageXl">
       <div className="rulesTexts md:rulesTextsMd">
-        <h1 className="rulesTitle">Règles du jeu</h1>
+        <h2 className="rulesTitle">Règles du jeu</h2>
         <div className="rulesParag md:rulesParagMd">
           <p>Alors, voilà comment ça marche le Blurtest en ligne !</p>
           <p>
