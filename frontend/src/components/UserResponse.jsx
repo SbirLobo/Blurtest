@@ -5,9 +5,12 @@ function UserResponse({
   setNext,
   handleSubmit,
   setBlurAnimation,
-  endGame,
+  hiddenEndGame,
+  visibleEndGame,
   score,
   index,
+  themeId,
+  themes,
 }) {
   const handleClick = () => {
     setNext(!next);
@@ -16,9 +19,7 @@ function UserResponse({
     }
   };
 
-  const hiddenEndGame = !endGame ? "" : "hidden";
-  const visibleEndGame = endGame ? "" : "hidden";
-
+  const theme = themes.filter((e) => e.id === themeId)[0].name;
   let endText = "";
   if (score === 0) {
     endText =
@@ -50,8 +51,8 @@ function UserResponse({
 
   return (
     <div className="infoBlockXl">
-      <h3 className="cardfilmTitle h-7 md:text-2xl mb-[5rem] max-xl:hidden">
-        Theme
+      <h3 className="cardfilmTitle h-10 md:text-2xl mb-[5rem] max-xl:hidden font-bold">
+        {theme}
       </h3>
       <p
         className={`text-3xl font-bold text-secondary mb-5 flex justify-center ${visibleEndGame}`}
@@ -103,9 +104,12 @@ UserResponse.propTypes = {
   setNext: PropTypes.func.isRequired,
   setBlurAnimation: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  endGame: PropTypes.bool.isRequired,
   score: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
+  hiddenEndGame: PropTypes.string.isRequired,
+  visibleEndGame: PropTypes.string.isRequired,
+  themes: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  themeId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default UserResponse;

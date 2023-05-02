@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import CardFilm from "./CardFilm";
 import UserResponse from "./UserResponse";
 import ApiAnswers from "./ApiAnswers";
 import Score from "./Score";
 
-const pageIndex = [];
-const filmIndex = [];
-for (let i = 0; i < 7; i += 1) {
-  let randomPage = 0;
-  let randomFilm = 0;
-  do {
-    randomPage = Math.floor(Math.random() * 99) + 1;
-  } while (pageIndex.includes(randomPage));
-  do {
-    randomFilm = Math.floor(Math.random() * 20);
-  } while (filmIndex.includes(randomFilm));
-  pageIndex.push(randomPage);
-  filmIndex.push(randomFilm);
-}
-
-function Jeux() {
+function Jeux({ themeId, themes }) {
+  const pageIndex = [];
+  const filmIndex = [];
+  for (let i = 0; i < 7; i += 1) {
+    let randomPage = 0;
+    let randomFilm = 0;
+    do {
+      randomPage = Math.floor(Math.random() * 99) + 1;
+    } while (pageIndex.includes(randomPage));
+    do {
+      randomFilm = Math.floor(Math.random() * 20);
+    } while (filmIndex.includes(randomFilm));
+    pageIndex.push(randomPage);
+    filmIndex.push(randomFilm);
+  }
   const [next, setNext] = useState(true);
   const [submitResponse, setSubmitResponse] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -30,11 +30,12 @@ function Jeux() {
   const [showResultActing1, setShowResultActing1] = useState("hidden");
   const [showResultActing2, setShowResultActing2] = useState("hidden");
   const [score, setScore] = useState(0);
-  const [endGame, setEndGame] = useState(false);
+  const [hiddenEndGame, setHiddenEndGame] = useState("");
+  const [visibleEndGame, setVisibleEndGame] = useState("hidden");
 
   const API_KEY = import.meta.env.VITE_API_KEY;
   const [index, setIndex] = useState(0);
-  const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}`;
+  const API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=fr-FR&sort_by=vote_count.desc&include_adult=false&page=${pageIndex[index]}&with_genres=${themeId}`;
   const [movie, setMovie] = useState({});
   const [credits, setCredits] = useState({});
   const [blurAnimation, setBlurAnimation] = useState("affiche");
@@ -53,7 +54,8 @@ function Jeux() {
       setShowResultActing1("");
       setShowResultActing2("");
       if (index === 7) {
-        setEndGame(true);
+        setHiddenEndGame("hidden");
+        setVisibleEndGame("");
       }
     }, 45000);
 
@@ -143,16 +145,24 @@ function Jeux() {
 
   return (
     <div className="w-full xl:w-auto md:flex md:flex-row md:justify-center gap-10 xl:ml-[191px]">
-      <CardFilm testarr={movie} blurAnimation={blurAnimation} />
+      <CardFilm
+        testarr={movie}
+        blurAnimation={blurAnimation}
+        themeId={themeId}
+        themes={themes}
+      />
       <div className="flex flex-col justify-end items-center">
         <UserResponse
           next={next}
           setNext={setNext}
           handleSubmit={handleSubmit}
           setBlurAnimation={setBlurAnimation}
-          endGame={endGame}
+          hiddenEndGame={hiddenEndGame}
+          visibleEndGame={visibleEndGame}
           score={score}
           index={index}
+          themeId={themeId}
+          themes={themes}
         />
         <ApiAnswers
           filmTitle={filmTitle}
@@ -171,4 +181,10 @@ function Jeux() {
     </div>
   );
 }
+
+Jeux.propTypes = {
+  themeId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  themes: PropTypes.arrayOf(PropTypes.shape).isRequired,
+};
+
 export default Jeux;
