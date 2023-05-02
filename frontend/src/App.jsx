@@ -15,32 +15,32 @@ function App() {
     {
       id: "",
       name: "Populaire",
-      img: "./assets/themes/img_general.jpg",
+      img: "../assets/themes/img_general.jpg",
     },
     {
       id: 12,
       name: "Aventure",
-      img: "./assets/themes/img_aventure.jpg",
+      img: "../assets/themes/img_aventure.jpg",
     },
     {
       id: 18,
       name: "Drame",
-      img: "./assets/themes/img_drame.jpg",
+      img: "../assets/themes/img_drame.jpg",
     },
     {
       id: 14,
       name: "Fantastique",
-      img: "./assets/themes/img_fantasy.jpg",
+      img: "../assets/themes/img_fantasy.jpg",
     },
     {
       id: 27,
       name: "Horreur",
-      img: "./assets/themes/img_horror.jpg",
+      img: "../assets/themes/img_horror.jpg",
     },
     {
       id: 10749,
       name: "Romance",
-      img: "./assets/themes/img_romance.jpg",
+      img: "../assets/themes/img_romance.jpg",
     },
   ];
   const [themeId, setThemeId] = useState("");
