@@ -224,11 +224,11 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     z-index: 1;
     height: 100%;
     width: 80%;
-    color: theme("colors.secondary");;
+    color: theme("colors.secondary");
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
   }
 
   .rulesTextsMd {
@@ -243,7 +243,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
     font-size: 1.3rem;
     line-height: 1.7rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .rulesParag {
@@ -255,7 +255,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 
   .rulesParagMd {
     font-size: 0.9rem;
-    line-height: 1.4rem;
+    line-height: 2rem;
   }
 
   .rulesTexts p:nth-child(1),
