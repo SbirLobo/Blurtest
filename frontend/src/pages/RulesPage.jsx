@@ -10,8 +10,8 @@ function RulesPage() {
           <p>
             Tu as des affiches de films floutées qui se dé-floutent petit à
             petit pendant 45 secondes. Ton but ? Deviner le titre, l'année, le
-            réalisateur et 2 acteurs principaux du film. C'est pas facile, mais
-            ça rend le jeu super fun !
+            réalisateur et les acteurs principaux du film. Pas facile, mais ça
+            rend le jeu super fun !
           </p>
           <p>
             Tu as juste à saisir tes réponses dans les champs prévus à cet effet
