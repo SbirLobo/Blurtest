@@ -2,7 +2,7 @@ import React from "react";
 
 function ContactPage() {
   return (
-    <div>
+    <div className="h-screen">
       <h1>Contact</h1>
       <p>Ceci est la page de contact.</p>
     </div>
