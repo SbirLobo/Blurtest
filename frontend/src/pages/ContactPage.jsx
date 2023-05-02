@@ -2,20 +2,20 @@ import React from "react";
 
 function ContactPage() {
   return (
-    <main>
+    <main className="flex flex-col justify-center">
       <div className="infoBlockXl">
-        <h1 className="cardfilmTitle h-7 md:text-2xl mb-[5rem] max-xl:hidden">
-          Formulaire de conctact
+        <h1 className="cardfilmTitle h-7 md:text-2xl  mb-[1rem]">
+          Formulaire de contact
         </h1>
       </div>
 
       <section id="contact">
-        <form id="contactForm">
-          <label htmlFor="name" placeholder="Votre Nom">
-            Prenom,Nom
+        <form id="contactForm" className="flex flex-col justify-center">
+          <label className="w-full" htmlFor="name" placeholder="Votre Nom">
+            Prénom, Nom :
           </label>
-          <br />
           <input
+            className="rounded px-2"
             type="text"
             id="name"
             name="name"
@@ -25,9 +25,11 @@ function ContactPage() {
           />
           <br />
 
-          <label htmlFor="lastname">Objet:</label>
-          <br />
+          <label className="w-full" htmlFor="lastname">
+            Objet :
+          </label>
           <input
+            className="rounded px-2"
             type="text"
             id="lastname"
             name="lname"
@@ -36,31 +38,35 @@ function ContactPage() {
             required
           />
           <br />
-          <br />
 
-          <label htmlFor="email" autoComplete required>
-            Adresse Email:
+          <label className="w-full" htmlFor="email" autoComplete required>
+            Adresse Email :
           </label>
-          <br />
           <input
-            width="500px"
+            className="rounded px-2"
             type="email"
             id="email"
             name="email"
-            placeholder="example@seamail.com"
+            placeholder="exemple@email.com"
             required
           />
           <br />
 
-          <label htmlFor="message">Message:</label>
-          <br />
-          <textarea id="message" name="message" required />
-          <br />
+          <label className="w-full" htmlFor="message">
+            Message :
+          </label>
+          <textarea
+            className="rounded px-2"
+            id="message"
+            name="message"
+            rows="5"
+            required
+          />
           <br />
 
           <button
             type="submit"
-            className="okButton hover:okButtonHover md:okButtonDesktop md:text-xl"
+            className="okButton hover:okButtonHover md:h-[2.7rem] md:text-xl"
           >
             Envoyer
           </button>
