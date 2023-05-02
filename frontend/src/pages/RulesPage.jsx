@@ -28,7 +28,12 @@ function RulesPage() {
       <img
         src="./assets/film-reel.png"
         alt="Bobine de film"
-        className="rulesImg md:rulesImgMd"
+        className="rulesImg1 md:rulesImgMd1"
+      />
+      <img
+        src="./assets/film-negatives2.png"
+        alt="Film négatifs"
+        className="rulesImg2 md:rulesImgMd2"
       />
     </div>
   );
