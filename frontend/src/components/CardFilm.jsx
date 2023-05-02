@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 
-function CardFilm({ testarr, blurAnimation }) {
+function CardFilm({ testarr, blurAnimation, themeId, themes }) {
+  const theme = themes.filter((e) => e.id === themeId)[0].name;
   return (
     <div className="cardfilm md:mt-0 xl:w-[442px]">
-      <h3 className="cardfilmTitle h-7 md:text-2xl mb-5 xl:hidden">Theme</h3>
+      <h3 className="cardfilmTitle h-7 md:text-2xl mb-5 xl:hidden font-bold">
+        {theme}
+      </h3>
 
       <div className=" mt-3 mb-2 overflow-hidden rounded xl:w-[400px]">
         <img

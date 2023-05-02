@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "playfair";
-  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf")
+  src: url("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -12,7 +12,8 @@
 
 @font-face {
   font-family: "montserrat";
-  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -148,6 +149,10 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 
   .okButtonHover {
     background-color: theme("colors.tertiary");
+  }
+
+  .okButtonHover:active {
+    background-color: #cfae5b;
   }
 
   .buttonArrow {
