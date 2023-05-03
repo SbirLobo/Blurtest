@@ -109,7 +109,26 @@ function Jeux({ themeId, themes }) {
   const filmActing2 = credits.cast[1].name;
 
   if (
-    submitResponse.toLowerCase() === filmTitle.toLowerCase() &&
+    submitResponse
+      .toLowerCase()
+      .replace(": ", "")
+      .replace(" - ", " ")
+      .replace("partie ", "")
+      .replace("partie", "")
+      .replace("(", "")
+      .replace(")", "")
+      .replace(", ", " ")
+      .trim() ===
+      filmTitle
+        .toLowerCase()
+        .replace(": ", "")
+        .replace(" - ", " ")
+        .replace("partie ", "")
+        .replace("partie", "")
+        .replace("(", "")
+        .replace(")", "")
+        .replace(", ", " ")
+        .trim() &&
     showResultTitle === "hidden"
   ) {
     setShowResultTitle("");
