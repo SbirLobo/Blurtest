@@ -48,7 +48,6 @@ function UserResponse({
     endText =
       "2100 ! Le score maximum ! Merci, bravo... C'est tellement d'émotions !";
   }
-
   return (
     <div className="infoBlockXl">
       <h3 className="cardfilmTitle h-10 md:text-2xl mb-[5rem] max-xl:hidden font-bold">
@@ -85,14 +84,27 @@ function UserResponse({
           <button
             type="button"
             onClick={handleClick}
-            className={`buttonArrow md:buttonArrowDesktop ${hiddenEndGame}`}
+            className={`${
+              index === 7 ? "hidden" : ""
+            } buttonArrow md:buttonArrowDesktop ${hiddenEndGame}`}
           >
             <img
               className="arrowNext md:arrowNextDesktop"
-              src="./assets/chevron-forward-outline.svg"
+              src="../assets/chevron-forward-outline.svg"
               alt="Flèche suivante"
             />
           </button>
+          <div
+            className={`${
+              index === 7 ? "" : "hidden"
+            } buttonArrow md:buttonArrowDesktop ${hiddenEndGame}`}
+          >
+            <img
+              className="arrowNext md:arrowNextDesktop"
+              src="../assets/chevron-forward-inactive.svg"
+              alt="Flèche suivante"
+            />
+          </div>
         </div>
       </form>
     </div>
