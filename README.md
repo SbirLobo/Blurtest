@@ -28,7 +28,7 @@ This BlurTest is brought to you by the Hufflepuff team, made of Chloé ELLE, Kyl
 
 ## Web site
 
-<insérer image page d'accueil >
+![screenshot_blurtest_homepage](https://user-images.githubusercontent.com/108263661/235881909-e09aa7bc-b94d-400b-88f4-c6b4a2ae71f2.png)
 
 ---
 
@@ -51,10 +51,10 @@ If you want to contribute to this project, you can:
 ![logo_html](https://user-images.githubusercontent.com/108263661/235681487-1fd7507a-fd32-467e-97e9-bbc3497b141e.png)
 
 ![logo_react](https://user-images.githubusercontent.com/108263661/235681488-5db62f0b-e7e1-42a5-a8a1-487ddb777510.png)
-![logo_tailwind](https://user-images.githubusercontent.com/108263661/235681496-c7c5484e-8bd2-4218-9e0b-b9873db466b3.png)
+![logo_tailwind](https://user-images.githubusercontent.com/108263661/235688109-b62ab1a1-4d09-499a-bbdd-1f72388688a4.png)
 ![logo_nodejs](https://user-images.githubusercontent.com/108263661/235681491-362cbd7b-ca1f-4c49-8897-7e479c8cdbf1.png)
 
-![logo_github](https://user-images.githubusercontent.com/108263661/235681498-99fa5275-8683-476e-873b-3d497326b118.png)
+![logo_github](https://user-images.githubusercontent.com/108263661/235688112-bb98a6b9-6694-4149-9865-6efb4f8fbb10.png)
 ![logo_figma](https://user-images.githubusercontent.com/108263661/235681494-407a12f6-145c-4c6a-975b-79c163b96262.png)
 
 ---
