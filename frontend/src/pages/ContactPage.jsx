@@ -1,6 +1,10 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactPage() {
+  const notify = () => toast("Wow so easy !");
   return (
     <main className="flex flex-col justify-center my-auto xl:ml-[191px] min-h-[666px] h-screen mt-[66px]">
       <div className="infoBlockXl">
@@ -70,6 +74,12 @@ function ContactPage() {
           >
             Envoyer
           </button>
+          <div>
+            <button type="button" onClick={notify}>
+              Notify !
+            </button>
+            <ToastContainer />
+          </div>
         </form>
       </section>
     </main>
