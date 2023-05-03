@@ -26,12 +26,12 @@ function RulesPage() {
         </div>
       </div>
       <img
-        src="./assets/film-reel.png"
+        src="../assets/film-reel.png"
         alt="Bobine de film"
         className="rulesImg1 md:rulesImgMd1"
       />
       <img
-        src="./assets/film-negatives2.png"
+        src="../assets/film-negatives2.png"
         alt="Film négatifs"
         className="rulesImg2 md:rulesImgMd2"
       />
