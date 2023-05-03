@@ -24,7 +24,6 @@ function ContactPage() {
             id="name"
             name="name"
             placeholder="Votre Prenom et Nom"
-            autoComplete
             required
           />
 
@@ -40,14 +39,12 @@ function ContactPage() {
             id="lastname"
             name="lname"
             placeholder="Objet"
-            autoComplete
             required
           />
 
           <label
             className="w-full text-secondary flex justify-center"
             htmlFor="email"
-            autoComplete
             required
           >
             Adresse Email :
