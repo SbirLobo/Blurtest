@@ -1,10 +1,24 @@
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
 function ContactPage() {
-  const notify = () => toast("Wow so easy !");
+  const notify = (e) => {
+    e.preventDefault();
+
+    toast.success("🦄 Wow so easy!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
   return (
     <main className="flex flex-col justify-center my-auto xl:ml-[191px] min-h-[666px] h-screen mt-[66px]">
       <div className="infoBlockXl">
@@ -14,7 +28,11 @@ function ContactPage() {
       </div>
 
       <section id="contact">
-        <form id="contactForm" className="flex flex-col justify-center">
+        <form
+          id="contactForm"
+          onSubmit={notify}
+          className="flex flex-col justify-center"
+        >
           <label
             className="w-full text-secondary flex ml-2"
             htmlFor="name"
@@ -31,14 +49,14 @@ function ContactPage() {
             required
           />
 
-          <label className="w-full text-secondary flex ml-2" htmlFor="lastname">
+          <label className="w-full text-secondary flex ml-2" htmlFor="object">
             Objet :
           </label>
           <input
             className="rounded px-2 h-8 mb-6"
             type="text"
-            id="lastname"
-            name="lname"
+            id="object"
+            name="object"
             placeholder="Objet"
             required
           />
@@ -74,12 +92,6 @@ function ContactPage() {
           >
             Envoyer
           </button>
-          <div>
-            <button type="button" onClick={notify}>
-              Notify !
-            </button>
-            <ToastContainer />
-          </div>
         </form>
       </section>
     </main>
