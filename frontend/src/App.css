@@ -296,6 +296,15 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   }
 }
 
+label {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  color: #faf9f0;
+}
+
 @keyframes blur-animation {
   0% {
     filter: blur(40px);
