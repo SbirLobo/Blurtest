@@ -12,6 +12,11 @@ import RulesPage from "./pages/RulesPage";
 import "./App.css";
 
 function App() {
+  const [active, setActive] = useState("");
+  const handleClickLink = () => {
+    setActive("");
+  };
+
   const themes = [
     {
       id: "",
@@ -48,8 +53,12 @@ function App() {
   return (
     <Router>
       <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
-        <Header />
-        <NavBar />
+        <Header handleClickLink={handleClickLink} />
+        <NavBar
+          active={active}
+          setActive={setActive}
+          handleClickLink={handleClickLink}
+        />
         <Routes>
           <Route
             path="/"
