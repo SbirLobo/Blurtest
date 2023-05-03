@@ -57,7 +57,6 @@ function ContactPage() {
             placeholder="exemple@email.com"
             required
           />
-
           <label
             className="w-full text-secondary flex justify-center"
             htmlFor="message"
@@ -71,7 +70,6 @@ function ContactPage() {
             rows="5"
             required
           />
-
           <button
             type="submit"
             className="okButton hover:okButtonHover md:h-[2.7rem] md:text-xl"
