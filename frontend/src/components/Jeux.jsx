@@ -59,12 +59,11 @@ function Jeux({ themeId, themes }) {
       setShowResultReal("");
       setShowResultActing1("");
       setShowResultActing2("");
-      if (index === 7) {
+      if (index === 6) {
         setHiddenEndGame("hidden");
         setVisibleEndGame("");
       }
     }, 45000);
-
     return () => clearInterval(timer);
   }, [next]);
 
