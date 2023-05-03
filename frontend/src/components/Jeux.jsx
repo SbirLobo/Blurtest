@@ -13,7 +13,13 @@ function Jeux({ themeId, themes }) {
     let randomPage = 0;
     let randomFilm = 0;
     do {
-      randomPage = Math.floor(Math.random() * 99) + 1;
+      if (themeId === "") {
+        randomPage = Math.floor(Math.random() * 99) + 1;
+      } else if (themeId === 27 || themeId === 10749) {
+        randomPage = Math.floor(Math.random() * 19) + 1;
+      } else {
+        randomPage = Math.floor(Math.random() * 29) + 1;
+      }
     } while (pageIndex.includes(randomPage));
     do {
       randomFilm = Math.floor(Math.random() * 20);
@@ -103,7 +109,26 @@ function Jeux({ themeId, themes }) {
   const filmActing2 = credits.cast[1].name;
 
   if (
-    submitResponse.toLowerCase() === filmTitle.toLowerCase() &&
+    submitResponse
+      .toLowerCase()
+      .replace(": ", "")
+      .replace(" - ", " ")
+      .replace("partie ", "")
+      .replace("partie", "")
+      .replace("(", "")
+      .replace(")", "")
+      .replace(", ", " ")
+      .trim() ===
+      filmTitle
+        .toLowerCase()
+        .replace(": ", "")
+        .replace(" - ", " ")
+        .replace("partie ", "")
+        .replace("partie", "")
+        .replace("(", "")
+        .replace(")", "")
+        .replace(", ", " ")
+        .trim() &&
     showResultTitle === "hidden"
   ) {
     setShowResultTitle("");
