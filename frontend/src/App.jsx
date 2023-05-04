@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer, Flip } from "react-toastify";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -11,6 +12,11 @@ import RulesPage from "./pages/RulesPage";
 import "./App.css";
 
 function App() {
+  const [active, setActive] = useState("");
+  const handleClickLink = () => {
+    setActive("");
+  };
+
   const themes = [
     {
       id: "",
@@ -47,8 +53,12 @@ function App() {
   return (
     <Router>
       <div className="bg-primary flex flex-col justify-center items-center font-montserrat md:h-screen">
-        <Header />
-        <NavBar />
+        <Header handleClickLink={handleClickLink} />
+        <NavBar
+          active={active}
+          setActive={setActive}
+          handleClickLink={handleClickLink}
+        />
         <Routes>
           <Route
             path="/"
@@ -64,6 +74,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <ToastContainer transition={Flip} />
     </Router>
   );
 }
