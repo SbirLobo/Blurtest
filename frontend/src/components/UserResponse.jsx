@@ -31,8 +31,7 @@ function UserResponse({
   } else if (score < 800) {
     endText = "Pas mal... Mais certains joueurs sont bien meilleurs que toi !";
   } else if (score < 1000) {
-    endText =
-      "Bravo, c'est une belle performance. Tu devrais en profiter pour te vanter sur ton réseau social favori !";
+    endText = "Bravo, c'est une belle performance !";
   } else if (score < 1300) {
     endText =
       "Incroyable! Essaie un autre thème pour tester tes connaissances.";

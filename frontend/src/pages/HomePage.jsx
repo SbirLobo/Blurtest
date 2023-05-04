@@ -4,7 +4,7 @@ import CardTheme from "../components/CardTheme";
 
 function HomePage({ themes, setThemeId }) {
   return (
-    <div className="mt-[150px] md:mt-[70px] h-[60%] xl:ml-[191px] flex flex-col">
+    <div className="h-[60%] xl:ml-[191px] flex flex-col items-center">
       <h2 className="text-2xl text-center mb-16 text-secondary">
         Le 7ème art comme vous ne l'avez jamais{" "}
         <span className="blur-xs">VU</span> !
