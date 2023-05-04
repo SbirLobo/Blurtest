@@ -7,7 +7,7 @@ function ContactPage() {
   const notify = (e) => {
     e.preventDefault();
 
-    toast.success("Message envoyé ! 👓", {
+    toast.success("Message envoyé ! 🕶️", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,

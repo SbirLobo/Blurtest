@@ -13,6 +13,9 @@ function CardFilm({ testarr, blurAnimation, themeId, themes }) {
           className={`${blurAnimation} w-52 rounded md:w-80 md:mt-0 xl:w-fit`}
           src={`https://image.tmdb.org/t/p/w500${testarr.poster_path}`}
           alt="affiche film"
+          onContextMenu={(e) => {
+            e.preventDefault();
+          }}
         />
       </div>
     </div>
